@@ -1,5 +1,5 @@
 # Python-Poetry
-# Define the poem as a multi-line string
+
 poem = """
 He walked in young, too young they’d say,
 Before his first drink, before his day,
