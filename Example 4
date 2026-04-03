@@ -1,0 +1,40 @@
+# Top MLB ERA Leaders (2025)
+
+pitchers = [
+    {"name": "Tarik Skubal", "era": 2.39},
+    {"name": "Zack Wheeler", "era": 2.55},
+    {"name": "Corbin Burnes", "era": 2.62},
+    {"name": "Logan Gilbert", "era": 2.79},
+    {"name": "Tyler Glasnow", "era": 2.82},
+    {"name": "Luis Castillo", "era": 2.95},
+    {"name": "Max Fried", "era": 3.05},
+    {"name": "Pablo Lopez", "era": 3.12},
+    {"name": "Framber Valdez", "era": 3.20},
+    {"name": "George Kirby", "era": 3.25}
+]
+
+# 1. Sort pitchers by ERA (lowest is best)
+pitchers_sorted = sorted(pitchers, key=lambda x: x["era"])
+
+# 2. Print ranked list
+print("⚾ Top MLB ERA Leaders (2025):\n")
+for i, pitcher in enumerate(pitchers_sorted, start=1):
+    print(f"{i}. {pitcher['name']} - {pitcher['era']} ERA")
+
+# 3. Calculate average ERA
+total_era = sum(p["era"] for p in pitchers)
+average_era = total_era / len(pitchers)
+
+print("\n📊 Stats:")
+print(f"Average ERA (Top 10): {average_era:.2f}")
+
+# 4. Find elite pitchers (ERA under 3.00)
+elite_pitchers = [p["name"] for p in pitchers if p["era"] < 3.00]
+
+print("\n🔥 Elite Pitchers (ERA < 3.00):")
+for name in elite_pitchers:
+    print("-", name)
+
+# 5. Find best pitcher (lowest ERA)
+best_pitcher = min(pitchers, key=lambda x: x["era"])
+print(f"\n👑 Best ERA: {best_pitcher['name']} with {best_pitcher['era']} ERA")
