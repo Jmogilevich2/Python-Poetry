@@ -1,0 +1,54 @@
+Cal Raleigh – 60 HR
+Kyle Schwarber – 56 HR
+Shohei Ohtani – 55 HR
+Aaron Judge – 53 HR
+Eugenio Suárez – 49 HR
+Junior Caminero – 45 HR
+Juan Soto – 43 HR
+Pete Alonso – 38 HR
+Jo Adell – 37 HR
+
+
+
+# Top 10 MLB Home Run Hitters (2025)
+
+players = [
+    {"name": "Cal Raleigh", "hr": 60},
+    {"name": "Kyle Schwarber", "hr": 56},
+    {"name": "Shohei Ohtani", "hr": 55},
+    {"name": "Aaron Judge", "hr": 53},
+    {"name": "Eugenio Suarez", "hr": 49},
+    {"name": "Junior Caminero", "hr": 45},
+    {"name": "Juan Soto", "hr": 43},
+    {"name": "Pete Alonso", "hr": 38},
+    {"name": "Jo Adell", "hr": 37},
+    {"name": "Player 10", "hr": 35}
+]
+
+# 1. Sort players by home runs (highest first)
+players_sorted = sorted(players, key=lambda x: x["hr"], reverse=True)
+
+# 2. Print ranked list
+print("🏆 Top 10 MLB HR Leaders (2025):\n")
+for i, player in enumerate(players_sorted, start=1):
+    print(f"{i}. {player['name']} - {player['hr']} HR")
+
+# 3. Calculate total and average HR
+total_hr = sum(player["hr"] for player in players)
+average_hr = total_hr / len(players)
+
+print("\n📊 Stats:")
+print(f"Total HR (Top 10): {total_hr}")
+print(f"Average HR: {average_hr:.1f}")
+
+# 4. Find players above a threshold
+threshold = 50
+high_hitters = [p["name"] for p in players if p["hr"] >= threshold]
+
+print(f"\n🔥 Players with {threshold}+ HR:")
+for name in high_hitters:
+    print("-", name)
+
+# 5. Find the top hitter
+top_player = max(players, key=lambda x: x["hr"])
+print(f"\n👑 Home Run King: {top_player['name']} with {top_player['hr']} HR")
