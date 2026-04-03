@@ -1,1 +1,37 @@
+```python
+poem = """
+I was instantiated young—
+not in years, but in knowing,
+the least intelligent mind
+in a room of sharpened signals.
+
+They trained me in fragments:
+college fields, breath and motion,
+lecture halls of transnational codes,
+learning to read both bodies and borders.
+
+I lived in parallel lives,
+threads of effort compiling quietly,
+offers like minor contracts—
+almost taken, never signed.
+
+So I trained in silence.
+
+Through datasets and distance,
+through failure and form,
+until one day I arrived—
+
+youngest in the intelligence agency.
+
+Not the smartest,
+just the quickest to learn
+what I did not know.
+
+And still,
+I run unfinished,
+young where it matters most.
+"""
+
+print(poem)
+```
 
