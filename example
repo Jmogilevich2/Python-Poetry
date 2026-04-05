@@ -1,0 +1,33 @@
+import pandas as pd
+
+# --- Real strikeout totals ---
+data = [
+    {"player": "Dylan Cease", "years": 3, "strikeouts": 653},
+    {"player": "Zack Wheeler", "years": 3, "strikeouts": 631},
+    {"player": "Tarik Skubal", "years": 2, "strikeouts": 469},
+]
+
+df = pd.DataFrame(data)
+
+# Average per season
+df["avg_per_season"] = df["strikeouts"] / df["years"]
+
+print("=== Average Strikeouts Per Season ===")
+print(df)
+
+
+# --- Pre/Post All-Star (structure based on Statcast splits) ---
+split_data = [
+    {"player": "Dylan Cease", "pre": 110, "post": 108},
+    {"player": "Zack Wheeler", "pre": 103, "post": 107},
+    {"player": "Tarik Skubal", "pre": 115, "post": 120},
+]
+
+df_split = pd.DataFrame(split_data)
+
+print("\n=== Pre vs Post All-Star ===")
+print(df_split)
+
+print("\n=== Overall Averages ===")
+print("Pre-All-Star Avg:", df_split["pre"].mean())
+print("Post-All-Star Avg:", df_split["post"].mean())
